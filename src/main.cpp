@@ -1,22 +1,9 @@
+#include "../utilities/CLI.h"
+#include "../utilities/utils.h"
 #include <iostream>
-#include <string>
-#include <ctime>
 #include <fstream>
+#include <vector>
 using namespace std;
-
-class Tasks {
-    public:
-        int id;
-        string description;
-        string status;
-        time_t createdAt;
-        time_t updatedAt;
-        void add_task(string description);
-        void update_task(int id, string description);
-        void delete_task(int id);
-        void mark_progress(int id);
-        void list(string status);
-};
 
 int main(int argc, char* argv[]) {
     string user_input = argv[1];
@@ -24,8 +11,19 @@ int main(int argc, char* argv[]) {
         cout << "Usage: ./task-cli <input>" << endl;
         return 1;
     }
-    if (user_input == "cool") {
-        cout << "WOW" << endl;
+
+    ofstream writeFile("./src/list.json");
+    ifstream readFile("./src/list.json");
+    vector<Tasks> taskVector;
+    
+    if (!writeFile) {
+        cerr << "File could not be created or opened." << endl;
     }
+
+    if (user_input == "add" && argc == 3) {
+        string description = argv[2];
+        write_to_file(writeFile,taskVector);
+    }
+    else if (user_input == "")
     return 0;
 }

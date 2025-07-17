@@ -1,2 +1,2 @@
-task-cli: src/task-cli.cpp
-	g++ src/task-cli.cpp -o outputs/task-cli
+task-cli: src/main.cpp utilities/utils.cpp
+	g++ src/main.cpp utilities/utils.cpp -o main
