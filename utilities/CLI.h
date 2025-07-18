@@ -12,8 +12,9 @@ class Tasks {
         string status;
         string createdAt;
         string updatedAt;
+        Tasks();
         void add_task(int nextID, string description);
-        void update_task(int ID, string description);
+        void update_task(int ID, string description, vector<Tasks> taskVector);
         void delete_task(int ID);
         void mark_progress(int ID);
         void list(string status);

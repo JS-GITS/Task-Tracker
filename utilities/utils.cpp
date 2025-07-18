@@ -14,7 +14,7 @@ string get_date() {
 
     // Format as string
     ostringstream oss;
-    oss << put_time(local_tm, "%Y-%m-%d %H:%M:%S");
+    oss << put_time(local_tm, "%d-%B-%Y %H:%M:%S");
     return oss.str();
 }
 
@@ -23,13 +23,15 @@ void write_to_file(ofstream &file,const vector<Tasks> &objects) {
     for (size_t i = 0; i < objects.size(); i++) {
         file << "   {\n";
         file << "       \"id\": " << objects[i].ID << ",\n";
-        file << "       \"description\": " << objects[i].description << ",\n";
-        file << "       \"status\": " << objects[i].status << ",\n";
-        file << "       \"createdAt\": " << objects[i].createdAt << ",\n";
-        file << "       \"updatedAt\": " << objects[i].updatedAt;
+        file << "       \"description\": \"" << objects[i].description << "\",\n";
+        file << "       \"status\": \"" << objects[i].status << "\",\n";
+        file << "       \"createdAt\": \"" << objects[i].createdAt << "\",\n";
+        file << "       \"updatedAt\": \"" << objects[i].updatedAt << "\"\n";
         file << "   }";
-        if (i != objects.size() - 1)
+        if (i != objects.size() - 1) {
             file << ",";
+        }
+        file << "\n";
     }
     file << "]\n";
 }
