@@ -17,27 +17,28 @@ int main(int argc, char* argv[]) {
     if (user_input == "add" && argc == 3) {
         readJSON(taskVector);
         Task newTask;
-        int nextID = taskVector.size() + 1;
-        newTask.add_task(nextID,argv[2]);
+        Task lastElement = taskVector[taskVector.size()-1];
+        int nextID = lastElement.ID + 1;
+        string description = argv[2];
+        newTask.add_task(nextID,description);
         taskVector.push_back(newTask);
         writeJSON(taskVector);
     }
     else if (user_input == "update" && argc == 4) {
-        int ID = stoi(argv[2]);
+        size_t ID = stoi(argv[2]);
         string description = argv[3];
         readJSON(taskVector);
         Task::update_task(ID, description, taskVector);
-        cout << taskVector[0].description << endl;
         writeJSON(taskVector);
     }
     else if (user_input == "delete" && argc == 3) {
-        int ID = stoi(argv[2]);
+        size_t ID = stoi(argv[2]);
         readJSON(taskVector);
         Task::delete_task(ID, taskVector);
         writeJSON(taskVector);
     }
     else if((user_input == "mark-in-progress" || user_input == "mark-done") && argc == 3) {
-        int ID = stoi(argv[2]);
+        size_t ID = stoi(argv[2]);
         readJSON(taskVector);
         Task::mark_progress(ID, user_input, taskVector);
         writeJSON(taskVector);

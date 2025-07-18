@@ -2,22 +2,26 @@
 #include "CLI.h"
 #include "utils.h"
 
+// Constructor of the Class Task
 Task::Task() {
-    this->ID = -1;
+    this->ID = 0;
     this->description = "";
     this->status = "";
     this->createdAt = "";
     this->updatedAt = "";
 }
 
-void Task::add_task(int nextID, string description) {
+
+// Takes in the next ID for a task and its description, it will then assign those values to the object
+void Task::add_task(size_t nextID, string &description) {
     this->ID = nextID;
     this->description = description;
     status = "todo";
     this->createdAt = get_date();
 }
 
-void Task::update_task(int ID, string description, vector<Task> &taskVector) {
+// Takes the ID, description, and the vector of Tasks and updates the description using the ID
+void Task::update_task(size_t ID, string &description, vector<Task> &taskVector) {
     for (Task &i:taskVector) {
         if (i.ID == ID) {
             i.description = description;
@@ -29,8 +33,9 @@ void Task::update_task(int ID, string description, vector<Task> &taskVector) {
     exit(1);
 }
 
-void Task::delete_task(int ID, vector<Task> &taskVector) {
-    for (int i = 0; i < taskVector.size(); i++) {
+// Locates the index of the ID and deletes it from the vector of Tasks
+void Task::delete_task(size_t ID, vector<Task> &taskVector) {
+    for (size_t i = 0; i < taskVector.size(); i++) {
         if (taskVector[i].ID == ID) {
             taskVector.erase(taskVector.begin() + i);
             return;
@@ -40,7 +45,8 @@ void Task::delete_task(int ID, vector<Task> &taskVector) {
     exit(1);
 }
 
-void Task::mark_progress(int ID, string status, vector<Task> &taskVector) {
+// Searches the task with the same ID and change the status
+void Task::mark_progress(size_t ID, string &status, vector<Task> &taskVector) {
     for (Task &i:taskVector) {
         if (i.ID == ID) {
             if (status == "mark-in-progress") {
@@ -57,7 +63,8 @@ void Task::mark_progress(int ID, string status, vector<Task> &taskVector) {
     exit(1);
 }
 
-void Task::list(string status, const vector<Task> &taskVector) {
+// Searches all the tasks with the following status
+void Task::list(string &status, const vector<Task> &taskVector) {
     if (status == "todo") {
         for (const Task &i:taskVector) {
             if (i.status == "todo") {
