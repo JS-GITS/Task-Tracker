@@ -12,18 +12,25 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    ofstream writeFile("./src/list.json");
     ifstream readFile("./src/list.json");
-    vector<Tasks> taskVector;
-    if (!writeFile) {
-        cerr << "File could not be created or opened." << endl;
-    }
+    vector<Task> taskVector;
 
     if (user_input == "add" && argc == 3) {
-        Tasks newTask;
-        newTask.add_task(1,argv[2]);
-        taskVector.push_back(newTask);
-        write_to_file(writeFile,taskVector);
+        if (!readFile) {
+            Task newTask;
+            newTask.add_task(1,argv[2]);
+            ofstream writeFile("./src/list.json");
+            write_to_file(writeFile,taskVector);
+        }
+        else {
+            Task newTask;
+            read_from_file(readFile, taskVector);
+            int nextID = taskVector.size() + 1;
+            newTask.add_task(nextID,argv[2]);
+            taskVector.push_back(newTask);
+            ofstream writeFile("./src/list.json");
+            write_to_file(writeFile, taskVector);
+        }
     }
     else if (user_input == "")
     return 0;

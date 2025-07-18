@@ -7,6 +7,6 @@
 using namespace std;
 // get_date is a function that returns the current date
 string get_date();
-void write_to_file(ofstream &file,const vector<Tasks> &objects);
-void read_from_file();
+void write_to_file(ofstream &file,const vector<Task> &objects);
+void read_from_file(ifstream &file, vector<Task> &objects);
 #endif

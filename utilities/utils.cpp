@@ -18,7 +18,10 @@ string get_date() {
     return oss.str();
 }
 
-void write_to_file(ofstream &file,const vector<Tasks> &objects) {
+void write_to_file(ofstream &file,const vector<Task> &objects) {
+    if (!file) {
+        cerr << "File could not be created or opened." << endl;
+    }
     file << "[\n";
     for (size_t i = 0; i < objects.size(); i++) {
         file << "   {\n";
@@ -36,6 +39,47 @@ void write_to_file(ofstream &file,const vector<Tasks> &objects) {
     file << "]\n";
 }
 
-void read_from_file(ifstream file,const vector<Tasks> &objects) {
-
+void read_from_file(ifstream &file, vector<Task> &objects) {
+    if (!file) {
+        cerr << "File could not be opened." << endl;
+        return;
+    }
+    Task tempTask;
+    string line;
+    while (getline(file,line)) {
+        size_t position_1 = line.find("\"id\"");
+        size_t position_2 = line.find("\"description\"");
+        size_t position_3 = line.find("\"status\"");
+        size_t position_4 = line.find("\"createdAt\"");
+        size_t position_5 = line.find("\"updatedAt\"");
+        if (position_1 != string::npos) {
+            string idStr = line.substr(position_1 + 6);
+            tempTask.ID = stoi(idStr);
+        }
+        else if (position_2 != string::npos) {
+            string descriptionStr = line.substr(position_2 + 16);
+            size_t end = line.find("\"",position_2 + 16);
+            string text = descriptionStr.substr(0,end-position_2-16);
+            tempTask.description = text;
+        }
+        else if (position_3 != string::npos) {
+            string statusStr = line.substr(position_3 + 11);
+            size_t end = line.find("\"",position_3 + 11);
+            string text = statusStr.substr(0,end-position_3-11);
+            tempTask.status = text;
+        }
+        else if (position_4 != string::npos) {
+            string createdStr = line.substr(position_4 + 14);
+            size_t end = line.find("\"",position_4 + 14);
+            string text = createdStr.substr(0,end-position_4-14);
+            tempTask.createdAt = text;
+        }
+        else if (position_5 != string::npos) {
+            string updatedStr = line.substr(position_5 + 14);
+            size_t end = line.find("\"",position_5 + 14);
+            string text = updatedStr.substr(0,end-position_5-14);
+            tempTask.updatedAt = text;
+            objects.push_back(tempTask);
+        }
+    }
 }
