@@ -21,6 +21,7 @@ void Task::update_task(int ID, string description, vector<Task> &taskVector) {
     for (Task &i:taskVector) {
         if (i.ID == ID) {
             i.description = description;
+            i.updatedAt = get_date();
             return;
         }
     }

@@ -7,17 +7,10 @@
        "updatedAt": ""
    },
    {
-       "id": 2,
-       "description": "Walk around the park",
-       "status": "todo",
-       "createdAt": "19-July-2025 01:08:56",
-       "updatedAt": ""
-   },
-   {
        "id": 3,
-       "description": "Meet with my friends",
-       "status": "todo",
+       "description": "Buy BokChoy",
+       "status": "in-progress",
        "createdAt": "19-July-2025 01:09:04",
-       "updatedAt": ""
+       "updatedAt": "19-July-2025 01:26:17"
    }
 ]

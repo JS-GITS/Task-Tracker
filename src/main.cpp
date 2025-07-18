@@ -12,7 +12,6 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    
     vector<Task> taskVector;
 
     if (user_input == "add" && argc == 3) {
@@ -30,6 +29,25 @@ int main(int argc, char* argv[]) {
         Task::update_task(ID, description, taskVector);
         cout << taskVector[0].description << endl;
         writeJSON(taskVector);
+    }
+    else if (user_input == "delete" && argc == 3) {
+        int ID = stoi(argv[2]);
+        readJSON(taskVector);
+        Task::delete_task(ID, taskVector);
+        writeJSON(taskVector);
+    }
+    else if((user_input == "mark-in-progress" || user_input == "mark-done") && argc == 3) {
+        int ID = stoi(argv[2]);
+        readJSON(taskVector);
+        Task::mark_progress(ID, user_input, taskVector);
+        writeJSON(taskVector);
+    }
+    if (user_input == "list") {
+        string selection = argv[2];
+        if((selection == "todo" || selection == "in-progress" || selection == "done") && argc == 3) {
+            readJSON(taskVector);
+            Task::list(selection, taskVector);
+        }
     }
     return 0;
 }
