@@ -15,9 +15,9 @@ class Task {
         string updatedAt;
         Task();
         void add_task(int nextID, string description);
-        void update_task(int ID, string description, vector<Task> &taskVector);
-        void delete_task(int ID, vector<Task> &taskVector);
-        void mark_progress(int ID, string status, vector<Task> &taskVector);
-        void list(string status, vector<Task> &taskVector);
+        static void update_task(int ID, string description, vector<Task> &taskVector);
+        static void delete_task(int ID, vector<Task> &taskVector);
+        static void mark_progress(int ID, string status, vector<Task> &taskVector);
+        static void list(string status, const vector<Task> &taskVector);
 };
 #endif

@@ -9,4 +9,6 @@ using namespace std;
 string get_date();
 void write_to_file(ofstream &file,const vector<Task> &objects);
 void read_from_file(ifstream &file, vector<Task> &objects);
+void writeJSON(vector<Task> &taskVector);
+void readJSON(vector<Task> &taskVector);
 #endif

@@ -19,9 +19,6 @@ string get_date() {
 }
 
 void write_to_file(ofstream &file,const vector<Task> &objects) {
-    if (!file) {
-        cerr << "File could not be created or opened." << endl;
-    }
     file << "[\n";
     for (size_t i = 0; i < objects.size(); i++) {
         file << "   {\n";
@@ -41,7 +38,6 @@ void write_to_file(ofstream &file,const vector<Task> &objects) {
 
 void read_from_file(ifstream &file, vector<Task> &objects) {
     if (!file) {
-        cerr << "File could not be opened." << endl;
         return;
     }
     Task tempTask;
@@ -82,4 +78,20 @@ void read_from_file(ifstream &file, vector<Task> &objects) {
             objects.push_back(tempTask);
         }
     }
+}
+
+void writeJSON(vector<Task> &taskVector) {
+    ofstream writeFile("./src/list.json");
+    if (!writeFile) {
+        cerr << "File could not be created or opened." << endl;
+    }
+    write_to_file(writeFile, taskVector);
+}
+
+void readJSON(vector<Task> &taskVector) {
+    ifstream readFile("./src/list.json");
+    if (!readFile) {
+        cerr << "File could not be opened, add a task to get started." << endl;
+    }
+    read_from_file(readFile, taskVector);
 }
