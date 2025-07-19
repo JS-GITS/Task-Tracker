@@ -49,7 +49,11 @@ void Task::delete_task(size_t ID, vector<Task> &taskVector) {
 void Task::mark_progress(size_t ID, string &status, vector<Task> &taskVector) {
     for (Task &i:taskVector) {
         if (i.ID == ID) {
-            if (status == "mark-in-progress") {
+            if (status == "mark-todo") {
+                i.status = "todo";
+                return;
+            }
+            else if (status == "mark-in-progress") {
                 i.status = "in-progress";
                 return;
             }
@@ -61,6 +65,13 @@ void Task::mark_progress(size_t ID, string &status, vector<Task> &taskVector) {
     }
     cerr << "Task with the current ID does not exist." << endl;
     exit(1);
+}
+
+// Lists out all the tasks
+void Task::list(const vector<Task> &taskVector) {
+    for (const Task &i:taskVector) {
+        cout << i.description << endl;
+    }
 }
 
 // Searches all the tasks with the following status

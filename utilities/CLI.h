@@ -34,6 +34,7 @@ class Task {
         static void update_task(size_t ID, string &description, vector<Task> &taskVector);
         static void delete_task(size_t ID, vector<Task> &taskVector);
         static void mark_progress(size_t ID, string &status, vector<Task> &taskVector);
+        static void list(const vector<Task> &taskVector);
         static void list(string &status, const vector<Task> &taskVector);
 };
 #endif
