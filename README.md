@@ -1,6 +1,14 @@
 # Task-Tracker
 ### Project idea from https://roadmap.sh/projects/task-tracker
 
+Clone the repository and run the following command:
+```bash
+git clone https://github.com/JS-GITS/Task-Tracker.git
+cd ./Task-Tracker
+```
+
+
+Run the following commands to use the script:
 ```bash
 Adding a new task
 ./main add "Buy groceries"
