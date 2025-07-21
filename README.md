@@ -5,6 +5,7 @@ Clone the repository and run the following command:
 ```bash
 git clone https://github.com/JS-GITS/Task-Tracker.git
 cd ./Task-Tracker
+make
 ```
 
 
