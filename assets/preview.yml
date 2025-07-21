@@ -1,0 +1,993 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: D:\Documents\GitHub\Task-Tracker
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 135
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 20
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 492
+    content: "\e[?9001h\e[?1004h"
+  - delay: 61
+    content: "\e[?25l\e[2J\e[m\e[HWindows PowerShell\r\nCopyright (C) Microsoft Corporation. All rights reserved.\e[4;1HInstall the latest PowerShell for new features and improvements! https://aka.ms/PSWindows\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 11
+    content: "\e[?25l\e[6;1H\e[?25h"
+  - delay: 107
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 469
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93mm\e[?25h"
+  - delay: 84
+    content: "\e[m\e[?25l"
+  - delay: 8
+    content: "\e[93m\bma\e[?25h"
+  - delay: 91
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[6;38Hmak\e[?25h"
+  - delay: 97
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[6;38Hmake\e[?25h"
+  - delay: 138
+    content: "\e[m\r\n"
+  - delay: 53
+    content: "g++ src/main.cpp utilities/utils.cpp utilities/CLI.cpp -o main\r\n"
+  - delay: 1522
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 308
+    content: "\e[?25l"
+  - delay: 17
+    content: "\e[91m\e[8;36H> \e[37m.\e[?25h"
+  - delay: 143
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[8;36H> \e[93m./\e[?25h"
+  - delay: 467
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[8;38H./m\e[?25h"
+  - delay: 122
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[8;38H./ma\e[?25h"
+  - delay: 79
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[8;38H./mai\e[?25h"
+  - delay: 139
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[8;38H./main\e[?25h"
+  - delay: 129
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[8;38H./main \e[?25h"
+  - delay: 124
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[8;38H./main \e[37ma\e[?25h"
+  - delay: 139
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[8;38H./main \e[37mad\e[?25h"
+  - delay: 82
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[8;38H./main \e[37madd\e[?25h"
+  - delay: 120
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[8;38H./main \e[37madd \e[?25h"
+  - delay: 406
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[91m\e[8;36H> \e[93m./main \e[37madd \e[36m\"\e[?25h"
+  - delay: 229
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"B\e[?25h"
+  - delay: 171
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Bu\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy\e[?25h"
+  - delay: 81
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy \e[?25h"
+  - delay: 507
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy g\e[?25h"
+  - delay: 37
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy gr\e[?25h"
+  - delay: 168
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy gro\e[?25h"
+  - delay: 162
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy groc\e[?25h"
+  - delay: 156
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy groce\e[?25h"
+  - delay: 86
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy grocer\e[?25h"
+  - delay: 76
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy groceri\e[?25h"
+  - delay: 53
+    content: "\e[m\e[?25l"
+  - delay: 8
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy grocerie\e[?25h"
+  - delay: 46
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[8;38H./main \e[37madd \e[36m\"Buy groceries\e[?25h"
+  - delay: 488
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[8;36H> \e[93m./main \e[37madd \e[36m\"Buy groceries\"\e[?25h"
+  - delay: 142
+    content: "\e[m"
+  - delay: 11
+    content: "\r\n"
+  - delay: 42
+    content: "Task has been added!\r\n"
+  - delay: 19
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 875
+    content: "\e[?25l"
+  - delay: 9
+    content: "\e[91m\e[10;36H> \e[37m.\e[?25h"
+  - delay: 120
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[10;36H> \e[93m./\e[?25h"
+  - delay: 254
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[10;38H./m\e[?25h"
+  - delay: 120
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[10;38H./ma\e[?25h"
+  - delay: 54
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[10;38H./mai\e[?25h"
+  - delay: 130
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[10;38H./main\e[?25h"
+  - delay: 110
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[10;38H./main \e[?25h"
+  - delay: 86
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[10;38H./main \e[37ma\e[?25h"
+  - delay: 148
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[10;38H./main \e[37mad\e[?25h"
+  - delay: 84
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[10;38H./main \e[37madd\e[?25h"
+  - delay: 67
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[10;38H./main \e[37madd \e[?25h"
+  - delay: 1190
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[91m\e[10;36H> \e[93m./main \e[37madd \e[36m\"\e[?25h"
+  - delay: 272
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"M\e[?25h"
+  - delay: 153
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Ma\e[?25h"
+  - delay: 78
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Mak\e[?25h"
+  - delay: 59
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make\e[?25h"
+  - delay: 125
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make \e[?25h"
+  - delay: 296
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make b\e[?25h"
+  - delay: 78
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make br\e[?25h"
+  - delay: 55
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make bre\e[?25h"
+  - delay: 34
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make brea\e[?25h"
+  - delay: 160
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make break\e[?25h"
+  - delay: 301
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make breakf\e[?25h"
+  - delay: 61
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make breakfa\e[?25h"
+  - delay: 33
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make breakfas\e[?25h"
+  - delay: 68
+    content: "\e[m\e[?25l"
+  - delay: 8
+    content: "\e[93m\e[10;38H./main \e[37madd \e[36m\"Make breakfast\e[?25h"
+  - delay: 655
+    content: "\e[m\e[?25l"
+  - delay: 8
+    content: "\e[10;36H> \e[93m./main \e[37madd \e[36m\"Make breakfast\"\e[?25h"
+  - delay: 174
+    content: "\e[m"
+  - delay: 12
+    content: "\r\nTask has been added!"
+  - delay: 16
+    content: "\r\nPS D:\\Documents\\GitHub\\Task-Tracker> "
+  - delay: 624
+    content: "\e[?25l"
+  - delay: 15
+    content: "\e[91m\e[12;36H> \e[37m.\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[12;36H> \e[93m./\e[?25h"
+  - delay: 230
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[12;38H./m\e[?25h"
+  - delay: 112
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[12;38H./ma\e[?25h"
+  - delay: 83
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[12;38H./mai\e[?25h"
+  - delay: 130
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[12;38H./main\e[?25h"
+  - delay: 173
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[12;38H./main \e[?25h"
+  - delay: 451
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[12;38H./main \e[37ma\e[?25h"
+  - delay: 115
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[12;38H./main \e[37mad\e[?25h"
+  - delay: 97
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[12;38H./main \e[37madd\e[?25h"
+  - delay: 62
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[12;38H./main \e[37madd \e[?25h"
+  - delay: 354
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[91m\e[12;36H> \e[93m./main \e[37madd \e[36m\"\e[?25h"
+  - delay: 265
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"G\e[?25h"
+  - delay: 310
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go\e[?25h"
+  - delay: 374
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go \e[?25h"
+  - delay: 130
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go t\e[?25h"
+  - delay: 61
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to\e[?25h"
+  - delay: 97
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to \e[?25h"
+  - delay: 68
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to t\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to th\e[?25h"
+  - delay: 53
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to the\e[?25h"
+  - delay: 101
+    content: "\e[m\e[?25l"
+  - delay: 24
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to the \e[?25h"
+  - delay: 322
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to the g\e[?25h"
+  - delay: 128
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to the gy\e[?25h"
+  - delay: 302
+    content: "\e[m\e[?25l"
+  - delay: 24
+    content: "\e[93m\e[12;38H./main \e[37madd \e[36m\"Go to the gym\e[?25h"
+  - delay: 484
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[12;36H> \e[93m./main \e[37madd \e[36m\"Go to the gym\"\e[?25h"
+  - delay: 518
+    content: "\e[m"
+  - delay: 10
+    content: "\r\n"
+  - delay: 16
+    content: "Task has been added!\r\n"
+  - delay: 16
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 874
+    content: "\e[?25l"
+  - delay: 21
+    content: "\e[91m\e[14;36H> \e[37m.\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[14;36H> \e[93m./\e[?25h"
+  - delay: 265
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[14;38H./m\e[?25h"
+  - delay: 125
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[14;38H./ma\e[?25h"
+  - delay: 61
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[14;38H./mai\e[?25h"
+  - delay: 126
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[14;38H./main\e[?25h"
+  - delay: 122
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[14;38H./main \e[?25h"
+  - delay: 380
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[14;38H./main \e[37ml\e[?25h"
+  - delay: 148
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[14;38H./main \e[37mli\e[?25h"
+  - delay: 81
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[14;38H./main \e[37mlis\e[?25h"
+  - delay: 173
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[14;38H./main \e[37mlist\e[?25h"
+  - delay: 481
+    content: "\e[m"
+  - delay: 17
+    content: "\r\nID   | Description               | Status        | Created At              | Updated At\r\n-----+---------------------------+---------------+-------------------------+-------------------------\r\n1     Buy groceries               todo            21-July-2025 22:37:45\e[30X\r\n2     Make breakfast              todo            21-July-2025 22:37:52\e[30X\r\n3     Go to the gym               todo            21-July-2025 22:37:58\e[30X\r\n"
+  - delay: 16
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 1033
+    content: "\e[?25l"
+  - delay: 19
+    content: "\e[91m\e[20;36H> \e[37m.\e[?25h"
+  - delay: 107
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[20;36H> \e[93m./\e[?25h"
+  - delay: 483
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./m\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[20;38H./ma\e[?25h"
+  - delay: 77
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[20;38H./mai\e[?25h"
+  - delay: 135
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[20;38H./main\e[?25h"
+  - delay: 212
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./main \e[?25h"
+  - delay: 602
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[20;38H./main \e[37mu\e[?25h"
+  - delay: 314
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mup\e[?25h"
+  - delay: 105
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./main \e[37mupd\e[?25h"
+  - delay: 49
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mupda\e[?25h"
+  - delay: 148
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[20;38H./main \e[37mupdat\e[?25h"
+  - delay: 41
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./main \e[37mupdate\e[?25h"
+  - delay: 113
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[?25h"
+  - delay: 439
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2\e[?25h"
+  - delay: 211
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[?25h"
+  - delay: 628
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[91m\e[20;36H> \e[93m./main \e[37mupdate \e[97m2 \e[36m\"\e[?25h"
+  - delay: 203
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"W\e[?25h"
+  - delay: 176
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Wa\e[?25h"
+  - delay: 112
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Wal\e[?25h"
+  - delay: 144
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk\e[?25h"
+  - delay: 180
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk \e[?25h"
+  - delay: 299
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk i\e[?25h"
+  - delay: 135
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in\e[?25h"
+  - delay: 92
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in \e[?25h"
+  - delay: 40
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in t\e[?25h"
+  - delay: 62
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in the\e[?25h"
+  - delay: 126
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in the \e[?25h"
+  - delay: 591
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in the p\e[?25h"
+  - delay: 150
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in the pa\e[?25h"
+  - delay: 102
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in the par\e[?25h"
+  - delay: 154
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mupdate \e[97m2 \e[36m\"Walk in the park\e[?25h"
+  - delay: 502
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[20;36H> \e[93m./main \e[37mupdate \e[97m2 \e[36m\"Walk in the park\"\e[?25h"
+  - delay: 489
+    content: "\e[m"
+  - delay: 22
+    content: "\r\nTask has been updated!\r"
+  - delay: 12
+    content: "\nPS D:\\Documents\\GitHub\\Task-Tracker>\e[1C"
+  - delay: 1084
+    content: "\e[?25l"
+  - delay: 15
+    content: "\e[91m\e[20;36H> \e[37m.\e[?25h"
+  - delay: 130
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[20;36H> \e[93m./\e[?25h"
+  - delay: 232
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./m\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[20;38H./ma\e[?25h"
+  - delay: 75
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./mai\e[?25h"
+  - delay: 142
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[20;38H./main\e[?25h"
+  - delay: 673
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./main \e[?25h"
+  - delay: 279
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./main \e[37mm\e[?25h"
+  - delay: 49
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mma\e[?25h"
+  - delay: 94
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./main \e[37mmar\e[?25h"
+  - delay: 90
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[20;38H./main \e[37mmark\e[?25h"
+  - delay: 501
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mmark-\e[?25h"
+  - delay: 133
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[20;38H./main \e[37mmark-d\e[?25h"
+  - delay: 110
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./main \e[37mmark-do\e[?25h"
+  - delay: 125
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./main \e[37mmark-don\e[?25h"
+  - delay: 84
+    content: "\e[m\e[?25l"
+  - delay: 8
+    content: "\e[93m\e[20;38H./main \e[37mmark-done\e[?25h"
+  - delay: 123
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./main \e[37mmark-done \e[?25h"
+  - delay: 311
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mmark-done \e[97m2\e[?25h"
+  - delay: 656
+    content: "\e[m"
+  - delay: 11
+    content: "\r\nTask has been marked: done\r\n"
+  - delay: 16
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 359
+    content: "\e[?25l"
+  - delay: 14
+    content: "\e[91m\e[20;36H> \e[37m.\e[?25h"
+  - delay: 122
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[20;36H> \e[93m./\e[?25h"
+  - delay: 356
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./m\e[?25h"
+  - delay: 121
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./ma\e[?25h"
+  - delay: 385
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./mai\e[?25h"
+  - delay: 190
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[20;38H./main\e[?25h"
+  - delay: 211
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[20;38H./main \e[?25h"
+  - delay: 196
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[20;38H./main \e[37md\e[?25h"
+  - delay: 72
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mde\e[?25h"
+  - delay: 112
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mdee\e[?25h"
+  - delay: 41
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mdeel\e[?25h"
+  - delay: 56
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mdeele\e[?25h"
+  - delay: 15
+    content: "\e[?25l\e[m\e[93m\e[20;38H./main \e[37mdeelet\e[?25h"
+  - delay: 49
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mdeelete\e[?25h"
+  - delay: 464
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./main \e[37mdeelet \b\e[?25h"
+  - delay: 95
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./main \e[37mdeele \b\e[?25h"
+  - delay: 95
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mdeel \b\e[?25h"
+  - delay: 80
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mdee \b\e[?25h"
+  - delay: 213
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./main \e[37mde \b\e[?25h"
+  - delay: 428
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[20;38H./main \e[37mdel\e[?25h"
+  - delay: 81
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[20;38H./main \e[37mdele\e[?25h"
+  - delay: 59
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[20;38H./main \e[37mdelet\e[?25h"
+  - delay: 42
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mdelete\e[?25h"
+  - delay: 149
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./main \e[37mdelete \e[?25h"
+  - delay: 516
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./main \e[37mdelete \e[97m3\e[?25h"
+  - delay: 487
+    content: "\e[m"
+  - delay: 23
+    content: "\r\nTask has been deleted!\r"
+  - delay: 14
+    content: "\nPS D:\\Documents\\GitHub\\Task-Tracker>\e[1C"
+  - delay: 696
+    content: "\e[?25l"
+  - delay: 17
+    content: "\e[91m\e[20;36H> \e[37m.\e[?25h"
+  - delay: 106
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[20;36H> \e[93m./\e[?25h"
+  - delay: 249
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./m\e[?25h"
+  - delay: 95
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[20;38H./ma\e[?25h"
+  - delay: 88
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./mai\e[?25h"
+  - delay: 107
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./main\e[?25h"
+  - delay: 136
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./main \e[?25h"
+  - delay: 384
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[20;38H./main \e[37ml\e[?25h"
+  - delay: 136
+    content: "\e[m\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[20;38H./main \e[37mli\e[?25h"
+  - delay: 43
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[20;38H./main \e[37mlis\e[?25h"
+  - delay: 90
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[20;38H./main \e[37mlist\e[?25h"
+  - delay: 113
+    content: "\e[m"
+  - delay: 10
+    content: "\r\nID   | Description               | Status        | Created At              | Updated At\r\n-----+---------------------------+---------------+-------------------------+-------------------------\r\n1     Buy groceries               todo            21-July-2025 22:37:45\r\n2     Walk in the park            done            21-July-2025 22:37:52     21-July-2025 22:38:10\r\n"
+  - delay: 16
+    content: 'PS D:\Documents\GitHub\Task-Tracker> '
+  - delay: 1539
+    content: "\e[?25l"
+  - delay: 14
+    content: "\e[91m\e[20;36H> \e[37m.\e[?25h"
+  - delay: 102
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[20;36H> \e[93m./\e[?25h"
+  - delay: 527
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[20;38H./m\e[?25h"
+  - delay: 145
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[20;38H./ma\e[?25h"
+  - delay: 71
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./mai\e[?25h"
+  - delay: 119
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main\e[?25h"
+  - delay: 111
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[?25h"
+  - delay: 157
+    content: "\e[m\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[20;38H./main \e[37ml\e[?25h"
+  - delay: 115
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\e[20;38H./main \e[37mli\e[?25h"
+  - delay: 83
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\e[20;38H./main \e[37mlis\e[?25h"
+  - delay: 110
+    content: "\e[m\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[20;38H./main \e[37mlist\e[?25h"
+  - delay: 165
+    content: "\e[m\e[?25l"
+  - delay: 21
+    content: "\e[93m\e[20;38H./main \e[37mlist \e[?25h"
+  - delay: 245
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[20;38H./main \e[37mlist d\e[?25h"
+  - delay: 72
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38H./main \e[37mlist do\e[?25h"
+  - delay: 142
+    content: "\e[m\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[20;38H./main \e[37mlist don\e[?25h"
+  - delay: 44
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[20;38H./main \e[37mlist done\e[?25h"
+  - delay: 484
+    content: "\e[m"
+  - delay: 15
+    content: "\r\n"
+  - delay: 10
+    content: "ID   | Description               | Status        | Created At              | Updated At\r\n-----+---------------------------+---------------+-------------------------+-------------------------\r\n2     Walk in the park            done            21-July-2025 22:37:52     21-July-2025 22:38:10\r"
+  - delay: 5
+    content: "\nPS D:\\Documents\\GitHub\\Task-Tracker>\e[1C"
+  - delay: 2352
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93me\e[?25h"
+  - delay: 148
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\bex\e[?25h"
+  - delay: 73
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[20;38Hexi\e[?25h"
+  - delay: 49
+    content: "\e[m\e[?25l"
+  - delay: 12
+    content: "\e[92m\e[20;38Hexit\e[?25h"
+  - delay: 129
+    content: "\e[m"
+  - delay: 12
+    content: "\r\n"
