@@ -1,5 +1,6 @@
 # Task-Tracker
 ### Project idea from https://roadmap.sh/projects/task-tracker
+[![](./assets/preview.gif)](https://roadmap.sh/projects/task-tracker)
 
 Clone the repository and run the following command:
 ```bash
